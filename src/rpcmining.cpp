@@ -39,7 +39,7 @@ Value getmininginfo(const Array& params, bool fHelp)
     obj.push_back(Pair("currentblocktx",(uint64_t)nLastBlockTx));
 
     diff.push_back(Pair("proof-of-work",        GetDifficulty()));
-    diff.push_back(Pair("posp",       GetDifficulty(GetLastBlockIndex(pindexBest, true))));
+    diff.push_back(Pair("proof-of-stake",       GetDifficulty(GetLastBlockIndex(pindexBest, true))));
     diff.push_back(Pair("search-interval",      (int)nLastCoinStakeSearchInterval));
     obj.push_back(Pair("difficulty",    diff));
 

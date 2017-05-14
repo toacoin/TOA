@@ -2056,7 +2056,7 @@ bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) c
     {
         // Coinbase output should be empty if proof-of-stake block
         if (vtx[0].vout.size() != 1 || !vtx[0].vout[0].IsEmpty())
-            return DoS(100, error("CheckBlock() : coinbase output not empty for PoSP block"));
+            return DoS(100, error("CheckBlock() : coinbase output not empty for PoS block"));
 
         // Second transaction must be coinstake, the rest must not be
         if (vtx.empty() || !vtx[1].IsCoinStake())
@@ -2071,7 +2071,7 @@ bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) c
 
         // NovaCoin: check proof-of-stake block signature
         if (fCheckSig && !CheckBlockSignature())
-            return DoS(100, error("CheckBlock() : bad PoSP block signature"));
+            return DoS(100, error("CheckBlock() : bad PoS block signature"));
     }
 
     // Check transactions
@@ -2135,7 +2135,7 @@ bool CBlock::AcceptBlock()
 
     // Check proof-of-work or proof-of-stake
     if (nBits != GetNextTargetRequired(pindexPrev, IsProofOfStake()))
-        return DoS(100, error("AcceptBlock() : incorrect %s", IsProofOfWork() ? "proof-of-work" : "PoSP"));
+        return DoS(100, error("AcceptBlock() : incorrect %s", IsProofOfWork() ? "proof-of-work" : "PoS"));
 
     // Check timestamp against prev
     if (GetBlockTime() <= pindexPrev->GetPastTimeLimit() || FutureDrift(GetBlockTime()) < pindexPrev->GetBlockTime())
@@ -2288,7 +2288,7 @@ bool ProcessBlock(CNode* pfrom, CBlock* pblock)
             // Limited duplicity on stake: prevents block flood attack
             // Duplicate stake allowed only when there is orphan child block
             if (setStakeSeenOrphan.count(pblock->GetProofOfStake()) && !mapOrphanBlocksByPrev.count(hash) && !Checkpoints::WantedByPendingSyncCheckpoint(hash))
-                return error("ProcessBlock() : duplicate PoSP (%s, %d) for orphan block %s", pblock->GetProofOfStake().first.ToString().c_str(), pblock->GetProofOfStake().second, hash.ToString().c_str());
+                return error("ProcessBlock() : duplicate PoS (%s, %d) for orphan block %s", pblock->GetProofOfStake().first.ToString().c_str(), pblock->GetProofOfStake().second, hash.ToString().c_str());
             else
                 setStakeSeenOrphan.insert(pblock->GetProofOfStake());
         }

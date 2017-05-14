@@ -488,14 +488,14 @@ bool CheckStake(CBlock* pblock, CWallet& wallet)
     uint256 hashBlock = pblock->GetHash();
 
     if(!pblock->IsProofOfStake())
-        return error("CheckStake() : %s is not a PoSP block", hashBlock.GetHex().c_str());
+        return error("CheckStake() : %s is not a PoS block", hashBlock.GetHex().c_str());
 
     // verify hash target and signature of coinstake tx
     if (!CheckProofOfStake(pblock->vtx[1], pblock->nBits, proofHash, hashTarget))
         return error("CheckStake() : proof-of-stake checking failed");
 
     //// debug print
-    printf("CheckStake() : new PoSP block found  \n  hash: %s \nproofhash: %s  \ntarget: %s\n", hashBlock.GetHex().c_str(), proofHash.GetHex().c_str(), hashTarget.GetHex().c_str());
+    printf("CheckStake() : new PoS block found  \n  hash: %s \nproofhash: %s  \ntarget: %s\n", hashBlock.GetHex().c_str(), proofHash.GetHex().c_str(), hashTarget.GetHex().c_str());
     pblock->print();
     printf("out %s\n", FormatMoney(pblock->vtx[1].GetValueOut()).c_str());
 
