@@ -43,7 +43,8 @@ CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 16);
 unsigned int nTargetSpacing = 1 * 60; // 1 minute
 unsigned int nStakeMinAge = 4 * 60 * 60;
 unsigned int nStakeMaxAge = -1; // unlimited
-unsigned int nModifierInterval = 65; // time to elapse before new modifier is computed
+unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
+static const int64_t nTargetTimespan = 10 * 60; 
 
 int nCoinbaseMaturity = 20;
 CBlockIndex* pindexGenesisBlock = NULL;
@@ -1028,8 +1029,6 @@ int64_t GetProofOfStakeReward(int64_t nMoneySupply, int64_t nFees)
 
     return nSubsidy + nFees;
 }
-
-static const int64_t nTargetTimespan = 0.16 * 24 * 60 * 60;  // 16 mins
 
 //
 // maximum nBits value could possible be required nTime after

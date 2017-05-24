@@ -30,7 +30,7 @@ class CTxMemPool;
 
 static const int LAST_POW_BLOCK = 1500;
 
-static const int NEW_CHAIN_PROTOCOL_VERSION = 60015;
+static const int NEW_CHAIN_PROTOCOL_VERSION = 60016;
 
 /** The maximum allowed size for a serialized block, in bytes (network rule) */
 static const unsigned int MAX_BLOCK_SIZE = 1000000;
