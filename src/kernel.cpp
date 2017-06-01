@@ -278,7 +278,7 @@ bool CheckStakeKernelHash(unsigned int nBits, const CBlock& blockFrom, unsigned 
 
     uint256 hashBlockFrom = blockFrom.GetHash();
 
-    CBigNum bnWeight = CBigNum(nValueIn);
+    CBigNum bnWeight = CBigNum(nValueIn) * GetWeight((int64_t)txPrev.nTime, (int64_t)nTimeTx) / COIN / (24 * 60 * 60);;
 
     // Calculate hash
     CDataStream ss(SER_GETHASH, 0);
