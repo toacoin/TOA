@@ -999,7 +999,7 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
 }
 
 // miner's coin base reward
-int64_t GetProofOfWorkReward(int64_t nFees)
+int64_t GetProofOfWorkReward(int64_t nFees, int64_t nMoneySupply)
 {
     
     int64_t nSubsidy = 0;
@@ -1011,6 +1011,8 @@ int64_t GetProofOfWorkReward(int64_t nFees)
     else if(nBestHeight >= 1 && nBestHeight <= 1400)
     {
         nSubsidy = 8800000000 * COIN / 1400;
+    }else if(nBestHeight > 1400 && nMoneySupply < 8800000000 * COIN){
+        nSubsidy = (8800000000 * COIN) - nMoneySupply;
     }
 
     if (fDebug && GetBoolArg("-printcreation"))
@@ -1577,7 +1579,11 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
 
     if (IsProofOfWork())
     {
-        int64_t nReward = GetProofOfWorkReward(nFees);
+        int64_t nMoneySupply = 0;
+
+        if(pindex != NULL && pindex->pprev != NULL)
+            nMoneySupply = pindex->pprev->nMoneySupply;
+        int64_t nReward = GetProofOfWorkReward(nFees, nMoneySupply);
         // Check coinbase reward
         if (vtx[0].GetValueOut() > nReward)
             return DoS(50, error("ConnectBlock() : coinbase reward exceeded (actual=%"PRId64" vs calculated=%"PRId64")",

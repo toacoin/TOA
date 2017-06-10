@@ -359,8 +359,13 @@ CBlock* CreateNewBlock(CWallet* pwallet, bool fProofOfStake, int64_t* pFees)
         if (fDebug && GetBoolArg("-printpriority"))
             printf("CreateNewBlock(): total size %"PRIu64"\n", nBlockSize);
 
+        int64_t nMoneySupply = 0;
+
+        if(pindexPrev != NULL)
+            nMoneySupply = pindexPrev->nMoneySupply;
+
         if (!fProofOfStake)
-            pblock->vtx[0].vout[0].nValue = GetProofOfWorkReward(nFees);
+            pblock->vtx[0].vout[0].nValue = GetProofOfWorkReward(nFees, nMoneySupply);
 
         if (pFees)
             *pFees = nFees;
