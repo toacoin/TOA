@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>573</width>
+    <width>579</width>
     <height>342</height>
    </rect>
   </property>
@@ -450,6 +450,9 @@
               <weight>75</weight>
               <bold>true</bold>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QWidget { background: transparent; rgb(0,0,0) }</string>
             </property>
             <property name="text">
              <string>Wallet</string>
@@ -4826,17 +4829,14 @@
       </widget>
      </item>
      <item>
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
+      <widget class="QFrame" name="frame_3">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
        </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>40</height>
-        </size>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
        </property>
-      </spacer>
+      </widget>
      </item>
     </layout>
    </item>
@@ -5284,7 +5284,7 @@
              </palette>
             </property>
             <property name="text">
-             <string>&lt;b&gt;Recent transactions&lt;/b&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Recent Transactions&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
@@ -5327,9 +5327,9 @@
              <colorrole role="WindowText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>255</red>
-                <green>255</green>
-                <blue>255</blue>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
                </color>
               </brush>
              </colorrole>
@@ -5381,9 +5381,9 @@
              <colorrole role="Text">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>255</red>
-                <green>255</green>
-                <blue>255</blue>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
                </color>
               </brush>
              </colorrole>
@@ -5399,9 +5399,9 @@
              <colorrole role="ButtonText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>255</red>
-                <green>255</green>
-                <blue>255</blue>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
                </color>
               </brush>
              </colorrole>
@@ -5473,9 +5473,9 @@
              <colorrole role="WindowText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>255</red>
-                <green>255</green>
-                <blue>255</blue>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
                </color>
               </brush>
              </colorrole>
@@ -5527,9 +5527,9 @@
              <colorrole role="Text">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>255</red>
-                <green>255</green>
-                <blue>255</blue>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
                </color>
               </brush>
              </colorrole>
@@ -5545,9 +5545,9 @@
              <colorrole role="ButtonText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>255</red>
-                <green>255</green>
-                <blue>255</blue>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
                </color>
               </brush>
              </colorrole>
@@ -5618,7 +5618,7 @@
             <disabled>
              <colorrole role="WindowText">
               <brush brushstyle="SolidPattern">
-               <color alpha="0">
+               <color alpha="255">
                 <red>0</red>
                 <green>0</green>
                 <blue>0</blue>
@@ -5672,7 +5672,7 @@
              </colorrole>
              <colorrole role="Text">
               <brush brushstyle="SolidPattern">
-               <color alpha="0">
+               <color alpha="255">
                 <red>0</red>
                 <green>0</green>
                 <blue>0</blue>
@@ -5690,7 +5690,7 @@
              </colorrole>
              <colorrole role="ButtonText">
               <brush brushstyle="SolidPattern">
-               <color alpha="0">
+               <color alpha="255">
                 <red>0</red>
                 <green>0</green>
                 <blue>0</blue>
@@ -5764,7 +5764,7 @@
            </palette>
           </property>
           <property name="styleSheet">
-           <string notr="true">QListView { background: transparent; }</string>
+           <string notr="true">QListView{color: black ;font-size: 16px; outline:none;font-weight:bold}</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::NoFrame</enum>
