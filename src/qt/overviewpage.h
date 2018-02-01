@@ -46,6 +46,7 @@ private:
 private slots:
     void updateDisplayUnit();
     void handleTransactionClicked(const QModelIndex &index);
+    void on_label_2_linkActivated(const QString &link);
 };
 
 #endif // OVERVIEWPAGE_H

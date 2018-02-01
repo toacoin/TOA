@@ -136,6 +136,9 @@ void AddressBookPage::setModel(AddressTableModel *model)
             AddressTableModel::Address, 320);
     ui->tableView->horizontalHeader()->setResizeMode(
             AddressTableModel::Label, QHeaderView::Stretch);
+    ui->tableView->horizontalHeader()->setStyleSheet( "QHeaderView::section { background-color: #395CA5; color:white; border-bottom: 1px solid black; border-width:1 }" );
+
+
 
     connect(ui->tableView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
             this, SLOT(selectionChanged()));

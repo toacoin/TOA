@@ -168,6 +168,8 @@ void TransactionView::setModel(WalletModel *model)
 
         transactionProxyModel->setSortRole(Qt::EditRole);
 
+        transactionView->setStyleSheet("QTableView {background: transparent; border-width:1;}");
+
         transactionView->setModel(transactionProxyModel);
         transactionView->setAlternatingRowColors(true);
         transactionView->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -186,6 +188,8 @@ void TransactionView::setModel(WalletModel *model)
                 TransactionTableModel::ToAddress, QHeaderView::Stretch);
         transactionView->horizontalHeader()->resizeSection(
                 TransactionTableModel::Amount, 100);
+        transactionView->horizontalHeader()->setStyleSheet( "QHeaderView::section { background-color: #395CA5; color:white; border-bottom: 1px solid black; border-width: 1;}" );
+
     }
 }
 

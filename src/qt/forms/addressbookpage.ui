@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>760</width>
+    <width>902</width>
     <height>380</height>
    </rect>
   </property>
@@ -14,7 +14,7 @@
    <string>Address Book</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/images/2s);</string>
+   <string notr="true">background: transparent;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -37,6 +37,16 @@
      </property>
      <property name="toolTip">
       <string>Double-click to edit address or label</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QHeaderView::section{
+            &quot;border-top:0px solid #D8D8D8;&quot;
+            &quot;border-left:0px solid #D8D8D8;&quot;
+            &quot;border-right:1px solid #D8D8D8;&quot;
+            &quot;border-bottom: 1px solid #D8D8D8;&quot;
+            &quot;background-color:white;&quot;
+            &quot;padding:4px;&quot;
+        }</string>
      </property>
      <property name="tabKeyNavigation">
       <bool>false</bool>
