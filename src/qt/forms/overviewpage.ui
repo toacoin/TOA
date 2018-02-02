@@ -552,6 +552,22 @@
          </layout>
         </item>
         <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>5</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
          <widget class="QFrame" name="frame">
           <layout class="QGridLayout" name="gridLayout_2">
            <property name="leftMargin">
@@ -4991,6 +5007,7 @@ color: rgb(57, 92, 166);</string>
        <zorder></zorder>
        <zorder>verticalSpacer_3</zorder>
        <zorder>frame</zorder>
+       <zorder>verticalSpacer_2</zorder>
       </widget>
      </item>
     </layout>
@@ -5467,7 +5484,7 @@ color: rgb(57, 92, 166);</string>
          </layout>
         </item>
         <item>
-         <spacer name="verticalSpacer_2">
+         <spacer name="verticalSpacer_5">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>
@@ -5477,7 +5494,7 @@ color: rgb(57, 92, 166);</string>
           <property name="sizeHint" stdset="0">
            <size>
             <width>20</width>
-            <height>28</height>
+            <height>3</height>
            </size>
           </property>
          </spacer>
