@@ -102,4 +102,7 @@
         <file alias="zh_CN">locale/bitcoin_zh_CN.qm</file>
         <file alias="zh_TW">locale/bitcoin_zh_TW.qm</file>
     </qresource>
+    <qresource prefix="/">
+        <file>res/fonts/helvetica</file>
+    </qresource>
 </RCC>
