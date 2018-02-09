@@ -14,7 +14,7 @@
    <string>Signatures - Sign / Verify a Message</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: transparent;</string>
+   <string notr="true"/>
   </property>
   <property name="modal">
    <bool>true</bool>
