@@ -13,6 +13,7 @@
 #include <QPainter>
 #include <QDesktopServices>
 #include <QUrl>
+#include <QFontDatabase>
 
 #define DECORATION_SIZE 60
 #define NUM_ITEMS 5
@@ -102,6 +103,15 @@ OverviewPage::OverviewPage(QWidget *parent) :
     filter(0)
 {
     ui->setupUi(this);
+
+    QFontDatabase::addApplicationFont("::/res/fonts/helvetica");
+
+    QFont font("Helvetica");
+    font.setPointSize(11);
+    QApplication::setFont(font);
+
+    //this->se
+
 
     // Recent transactions
     ui->listTransactions->setItemDelegate(txdelegate);
