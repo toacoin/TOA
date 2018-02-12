@@ -28,18 +28,14 @@ BitcoinAmountField::BitcoinAmountField(QWidget *parent):
     layout->addWidget(amount);
     unit = new QValueComboBox(this);
     unit->setModel(new BitcoinUnits(this));
-<<<<<<< HEAD
+
     int width = unit->minimumSizeHint().width();
     unit->setMinimumWidth(width);
 
     unit->setStyleSheet("QComboBox { background-color: #d2d2d2; }");
 
-=======
-   unit->setStyleSheet("QComboBox { background-color: #d2d2d2; }");
-    int width = unit->minimumSizeHint().width();
-    unit->setMinimumWidth(width);
 
->>>>>>> 5735a774c33f2078b94898208f97f99d28f46a28
+
     layout->addWidget(unit);
     layout->addStretch(1);
     layout->setContentsMargins(0,0,0,0);
