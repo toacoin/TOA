@@ -14,7 +14,7 @@
    <string>Address Book</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: transparent;</string>
+   <string notr="true"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -46,7 +46,11 @@
             &quot;border-bottom: 1px solid #D8D8D8;&quot;
             &quot;padding:4px;&quot;
         }
+<<<<<<< HEAD
 	background: transparent;</string>
+=======
+background: transparent;</string>
+>>>>>>> 5735a774c33f2078b94898208f97f99d28f46a28
      </property>
      <property name="tabKeyNavigation">
       <bool>false</bool>
