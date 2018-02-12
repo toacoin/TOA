@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>976</width>
+    <width>902</width>
     <height>380</height>
    </rect>
   </property>
@@ -14,7 +14,7 @@
    <string>Address Book</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background: transparent;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -46,11 +46,7 @@
             &quot;border-bottom: 1px solid #D8D8D8;&quot;
             &quot;padding:4px;&quot;
         }
-<<<<<<< HEAD
-	background: transparent;</string>
-=======
 background: transparent;</string>
->>>>>>> 5735a774c33f2078b94898208f97f99d28f46a28
      </property>
      <property name="tabKeyNavigation">
       <bool>false</bool>
@@ -128,7 +124,8 @@ background: transparent;</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="verifyMessage">
+
+<widget class="QPushButton" name="verifyMessage">
        <property name="toolTip">
         <string>Verify a message to ensure it was signed with a specified TOA address</string>
        </property>
