@@ -44,9 +44,9 @@
             &quot;border-left:0px solid #D8D8D8;&quot;
             &quot;border-right:1px solid #D8D8D8;&quot;
             &quot;border-bottom: 1px solid #D8D8D8;&quot;
-            &quot;background-color:white;&quot;
             &quot;padding:4px;&quot;
-        }</string>
+        }
+background: transparent;</string>
      </property>
      <property name="tabKeyNavigation">
       <bool>false</bool>

@@ -56,6 +56,7 @@
 #include <QDragEnterEvent>
 #include <QUrl>
 #include <QStyle>
+#include <QFontDatabase>
 
 #include <iostream>
 
@@ -81,8 +82,11 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     setWindowTitle(tr("TOA") + " - " + tr("Wallet"));
     qApp->setStyleSheet("QMainWindow { background-image:url(:images/bkg); }");
 
+    QFontDatabase::addApplicationFont("::/res/fonts/helvetica");
 
-    //qApp->setFont(font);
+    QFont font("Helvetica");
+    font.setPointSize(11);
+    QApplication::setFont(font);
 
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
