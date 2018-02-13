@@ -124,7 +124,8 @@ background: transparent;</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="verifyMessage">
+
+<widget class="QPushButton" name="verifyMessage">
        <property name="toolTip">
         <string>Verify a message to ensure it was signed with a specified TOA address</string>
        </property>

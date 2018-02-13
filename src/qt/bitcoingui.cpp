@@ -78,22 +78,27 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     rpcConsole(0),
     nWeight(0)
 {
-    setFixedSize(1280,694);
+
     setWindowTitle(tr("TOA") + " - " + tr("Wallet"));
     qApp->setStyleSheet("QMainWindow { background-image:url(:images/bkg); }");
+    setFixedSize(1280,694);
 
     QFontDatabase::addApplicationFont("::/res/fonts/helvetica");
-
-    QFont font("Helvetica");
-    font.setPointSize(11);
-    QApplication::setFont(font);
 
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
+    QFont font("Helvetica");
+    font.setPointSize(11);
+    QApplication::setFont(font);
+
 #else
     setUnifiedTitleAndToolBarOnMac(true);
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
+    QFont font("Helvetica");
+    font.setPointSize(13);
+    QApplication::setFont(font);
+    //setFixedSize(1024,600);
 #endif
     // Accept D&D of URIs
     setAcceptDrops(true);
