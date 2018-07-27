@@ -1,4 +1,11 @@
 <RCC>
+    <qresource lang="ru" prefix="/icons">
+        <file alias="address-book">res/icons/ru/address-book.png</file>
+        <file alias="history">res/icons/ru/history.png</file>
+        <file alias="overview">res/icons/ru/overview.png</file>    
+        <file alias="receiving_addresses">res/icons/ru/receive.png</file>
+        <file alias="send">res/icons/ru/send.png</file>
+    </qresource>
     <qresource prefix="/icons">
         <file alias="bitcoin">res/icons/novacoin-80.png</file>
         <file alias="address-book">res/icons/address-book.png</file>

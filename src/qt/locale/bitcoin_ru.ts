@@ -478,7 +478,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <source>Wallet</source>
-        <translation>Бумажник</translation>
+        <translation>КОШЕЛЕК</translation>
     </message>
     <message>
         <location line="+178"/>
@@ -1327,23 +1327,23 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-160"/>
-        <source>Stake:</source>
-        <translation>Доля:</translation>
+        <source>STAKE:</source>
+        <translation>СТАВКА:</translation>
     </message>
     <message>
         <location line="+29"/>
-        <source>Unconfirmed:</source>
+        <source>UNCONFIRMED:</source>
         <translation>Не подтверждено:</translation>
     </message>
     <message>
         <location line="-107"/>
-        <source>Wallet</source>
-        <translation>Бумажник</translation>
+        <source>WALLET</source>
+        <translation>КОШЕЛЕК</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Spendable:</source>
-        <translation>Доступно:</translation>
+        <source>SPENDABLE: </source>
+        <translation>ДОСТУПНО:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -1352,7 +1352,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+71"/>
-        <source>Immature:</source>
+        <source>IMMATURE:</source>
         <translation>Незрелые:</translation>
     </message>
     <message>
@@ -1362,8 +1362,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+20"/>
-        <source>Total:</source>
-        <translation>Итого:</translation>
+        <source>TOTAL:</source>
+        <translation>ИТОГО:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -1372,8 +1372,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+46"/>
-        <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Последние транзакции&lt;/b&gt;</translation>
+        <source>RECENT TRANSACTIONS</source>
+        <translation>НЕДАВНИЕ ОПЕРАЦИИ</translation>
     </message>
     <message>
         <location line="-108"/>
@@ -1388,8 +1388,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../overviewpage.cpp" line="+113"/>
         <location line="+1"/>
-        <source>out of sync</source>
-        <translation>не синхронизировано</translation>
+        <source>OUT OF SYNC</source>
+        <translation>НЕ СИНХРОНИЗИРОВАН</translation>
     </message>
 </context>
 <context>
@@ -2124,8 +2124,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>%1/unconfirmed</source>
-        <translation>%1/не подтверждено</translation>
+        <source>%1/UNCONFIRMED</source>
+        <translation>%1/НЕ ПОДТВЕРЖДЕНО:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2336,8 +2336,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Unconfirmed</source>
-        <translation>Не подтверждено</translation>
+        <source>UNCONFIRMED</source>
+        <translation>НЕ ПОДТВЕРЖДЕНО</translation>
     </message>
     <message>
         <location line="+3"/>
